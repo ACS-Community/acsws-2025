@@ -69,10 +69,14 @@ class StellariumComponent(TELESCOPE_MODULE__POA.TelescopeControl, Characteristic
         self.api = None
 
     # Component Operations
+    def setFov(self, fov):
+        self.api.gradual_fov(fov);
+
     def objfix(self, altitude, azimuth):
         self.api.gradual_fov(60.0);
         self.setTo(altitude, azimuth);
         self.api.gradual_fov(5.0);
+        self.setTo(altitude, azimuth);
 
     def setTo(self, altitude, azimuth):
         # Commanded positions

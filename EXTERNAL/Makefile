@@ -65,7 +65,7 @@
 
 SUBSYSTEM = "EXTERNAL"
 
-MODULES = Stellarium
+MODULES = Stellarium AstropyCamera
 
 #
 # If option KEEP_GOING=on is present in the make command line gnu_make is NOT interrupted 
